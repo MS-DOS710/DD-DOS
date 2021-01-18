@@ -1,0 +1,18 @@
+@ECHO OFF
+KEYRATE 0 0
+SET DIRCMD=/OGN /4
+SET SYSBOOT=YES
+PATH=A:.;..
+KILLER
+MSCDEX /D:MSCD001 /D:MSCD002 /K > NUL
+DOSKEY
+CTMOUSE
+::For compatibility:
+CTMOUSE > NUL
+ECHO.
+ECHO Loading DD-DOS Setup...
+IF EXIST SETUP.BAT SETUP.BAT
+ECHO Fatal Error: Cannot find DD-DOS Setup!
+ECHO.
+ECHO Now you are in DD-DOS Alpha prompt.
+ECHO.
